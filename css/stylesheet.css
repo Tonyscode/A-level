@@ -17,6 +17,7 @@ body {
     height: 133px;
     position: fixed;
     background: url(../images/bg-header.jpg) repeat-x center;
+    z-index: 0;
 
 }
 
@@ -164,7 +165,6 @@ body {
     width: 100%;
     display: block;
     background: url(../images/bg-wood.jpg);
-    z-index: -2;
     position: relative;
     top: 133px;
 
@@ -194,37 +194,46 @@ body {
 article{
     display: flex;
     background: url(../images/bg-texture.png) repeat ;
-
     position: relative;
-    padding: 70px 100px;
-
+    padding: 50px 0;
 }
 .main_description{
     flex-wrap: wrap;
     display: flex;
     margin: 0 -60px;
 }
-.block{
+.block_wrap{
     flex-wrap: wrap;
-    width: calc(50% - 120px);
-    margin: 60px;
     display: flex;
     box-sizing: border-box;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-
-
-    justify-content: center;
-
-
+    flex-direction: row;
     border: 1px red solid;
 }
-.block img{
-    min-width: 100%;
-    height: auto;
+.block_wrap:nth-child(2n){
+    flex-direction: row-reverse;
 }
-.block span{
+.block_img, .block_text{
+    height: auto;
+    width: calc(50% - 120px);
+    margin: 60px;
+    outline: 1px blue solid;
+}
+.block_img{
+    display: flex;
+    justify-content: center;
+
+}
+.block_img img{
+    max-width: 100%;
+}
+.block_text {
+    display: flex;
+    justify-content: center;
+}
+
+.block_wrap span{
     color: #fd1c18;
     line-height: 1.5;
     font-weight: 700;
@@ -232,9 +241,16 @@ article{
     text-transform: uppercase;
     padding-bottom: 10px;
  }
-@media only screen and (max-width: 992px) {
-    .block {
-        width: calc(100% - 120px);
-    }
 
+@media only screen and (max-width: 992px) {
+    .block_img, .block_text {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+    .main_description{
+        margin: 0;
+    }
+    .block_img img{
+        width: 100%;
+    }
 }
