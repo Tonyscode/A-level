@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #221818;
+    /*background-color: #221818;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     line-height: 1.77;
@@ -17,7 +17,7 @@ body {
     height: 133px;
     position: fixed;
     background: url(../images/bg-header.jpg) repeat-x center;
-    z-index: -2;
+
 }
 
 .container {
@@ -29,13 +29,12 @@ body {
 .wrap{
     width: 100%;
     display: flex;
-    position: relative;
+
     box-sizing: border-box;
     border: 1px solid red;
     justify-content: center;
 }
 .wrap .logo{
-    border: 1px solid blue;
     display: inline-block;
     text-align: center;
 }
@@ -45,44 +44,197 @@ body {
 
 .wrap nav{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 50px;
 }
 
-.nav-list ul li {
-    list-style: none;
-    text-decoration: none;
-    color: black;
-}
-.nav-list ul li>a{
-    text-decoration: none;
-    color: black;
+
+
+
+
+/*======ДЛЯ БУРГЕР-МЕНЮ==========*/
+.menu {
+    text-align: right;
+
+
 }
 
-#header nav > ul {
-    width: 770px
-}
+/*.menu__icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}*/
 
-#header nav .home a {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.3);
-}
-
-#header nav > ul > li > a {
-    color: #ffffff;
+.menu__icon span {
     display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    padding: 8px 13px;
-    text-transform: uppercase;
-    text-decoration: none;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #333333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
 }
 
-#header > nav > ul > li > a:hover, #header nav > ul > li > a:active {
-    background: #E8645A;
-    border-radius: 5px;
-    box-shadow: 1px 3px #E2534B;
-    padding: 8px 13px;
-    transition: .4s;
+.menu__icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+    top: 26px;
+}
+/*
+.menu__links-item {
+    display: none;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.1;
+    padding: 0 10px;
+    text-decoration: none;
+}*/
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+    display: block;
+}
+
+
+    .menu__icon{
+        display: inline-block;
+        width: 45px;
+        height: 35px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu__links {
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 33px;
+        width: 250px;
+        margin-top: 100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow: auto;
+    }
+
+    .menu__links-item {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        color: #ffffff;
+    }
+
+
+
+/*========контент=========*/
+#main{
+    width: 100%;
+    display: block;
+    background: url(../images/bg-wood.jpg);
+    z-index: -2;
+    position: relative;
+    top: 133px;
+
+}
+.container_story{
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 120px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+
+}
+.container_story h1{
+    font-size: 2.55em;
+    line-height: 1.13;
+    font-family:  'Courgette', cursive;
+    margin-bottom: 20px;
+}
+article{
+    display: flex;
+    background: url(../images/bg-texture.png) repeat ;
+
+    position: relative;
+    padding: 70px 100px;
+
+}
+.main_description{
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 -60px;
+}
+.block{
+    flex-wrap: wrap;
+    width: calc(50% - 120px);
+    margin: 60px;
+    display: flex;
+    box-sizing: border-box;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+
+    justify-content: center;
+
+
+    border: 1px red solid;
+}
+.block img{
+    min-width: 100%;
+    height: auto;
+}
+.block span{
+    color: #fd1c18;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+ }
+@media only screen and (max-width: 992px) {
+    .block {
+        width: calc(100% - 120px);
+    }
+
 }
