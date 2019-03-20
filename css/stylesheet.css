@@ -4,7 +4,7 @@
 }
 
 body {
-    /*background-color: #221818;*/
+    background-color: #e7e9eb;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     line-height: 1.77;
@@ -17,7 +17,7 @@ body {
     height: 133px;
     position: fixed;
     background: url(../images/bg-header.jpg) repeat-x center;
-    z-index: 0;
+    z-index: 10;
 
 }
 
@@ -30,18 +30,16 @@ body {
 .wrap{
     width: 100%;
     display: flex;
-
     box-sizing: border-box;
-    border: 1px solid red;
     justify-content: center;
 }
 .wrap .logo{
     display: inline-block;
     text-align: center;
 }
-.wrap img{
+/*.wrap img{
     width: 65%;
-}
+}*/
 
 .wrap nav{
     position: absolute;
@@ -50,31 +48,18 @@ body {
 }
 
 
-
-
-
 /*======ДЛЯ БУРГЕР-МЕНЮ==========*/
 .menu {
     text-align: right;
 
-
 }
-
-/*.menu__icon {
-    display: none;
-    width: 45px;
-    height: 35px;
-    position: relative;
-    cursor: pointer;
-}*/
-
 .menu__icon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 6px;
     width: 100%;
-    background: #333333;
-    border-radius: 9px;
+    background: #685aa7;
+
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -92,15 +77,6 @@ body {
 .menu__icon span:nth-child(4) {
     top: 26px;
 }
-/*
-.menu__links-item {
-    display: none;
-    color: #333333;
-    font-size: 14px;
-    line-height: 1.1;
-    padding: 0 10px;
-    text-decoration: none;
-}*/
 
 .menu__links-item:hover {
     text-decoration: underline;
@@ -146,11 +122,21 @@ body {
         right: 33px;
         width: 250px;
         margin-top: 100px;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: #685aa7;
         z-index: 1000;
         overflow: auto;
+        border-radius: 10px;
     }
-
+    .menu__links a:hover {
+        /*background-color: blue;
+        opacity: 0.5;
+        transition: opacity 0.5s ease;*/
+        background: #E8645A;
+        border-radius: 5px;
+        box-shadow: 1px 3px #E2534B;
+        padding: 8px 13px;
+        transition: .4s;
+    }
     .menu__links-item {
         display: block;
         padding: 10px 0;
@@ -164,17 +150,15 @@ body {
 #main{
     width: 100%;
     display: block;
-    background: url(../images/bg-wood.jpg);
     position: relative;
     top: 133px;
-
+    margin-bottom: 133px;
+}
+.story_block{
+    background: url(../images/bg-wood.jpg);
+    height: 340px;
 }
 .container_story{
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    -khtml-display: flex;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -183,7 +167,6 @@ body {
     font-weight: 400;
     font-size: 1em;
     text-align: center;
-
 }
 .container_story h1{
     font-size: 2.55em;
@@ -191,7 +174,7 @@ body {
     font-family:  'Courgette', cursive;
     margin-bottom: 20px;
 }
-article{
+.article{
     display: flex;
     background: url(../images/bg-texture.png) repeat ;
     position: relative;
@@ -206,10 +189,7 @@ article{
     flex-wrap: wrap;
     display: flex;
     box-sizing: border-box;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: row;
-    border: 1px red solid;
     justify-content: center;
 }
 .block_wrap:nth-child(2n){
@@ -219,7 +199,6 @@ article{
     height: auto;
     width: calc(50% - 100px);
     margin: 50px;
-    outline: 1px blue solid;
     align-self: center;
 }
 .block_img{
@@ -231,15 +210,119 @@ article{
     max-width: 100%;
 }
 
-.block_wrap span{
+.description_header{
     color: #fd1c18;
     line-height: 1.5;
     font-weight: 700;
     font-size: 1em;
     text-transform: uppercase;
 }
+.block_text p{
+    margin-bottom: 15px;
+}
+.see_beers, .footer_directions{
+    text-transform: uppercase;
+    color: #000;
+    padding: 5px 8px;
+    border: 2px solid #000;
+    font-weight: 700;
+    text-decoration: none;
+
+}
 .block_wrap p{
     margin-top: 10px;
+}
+
+section .form_block {
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form_block .description_header{
+    display: inline-block;
+    text-align: center;
+    padding: 50px 0 15px 0;
+}
+.form_block input, textarea {
+    width: calc(100% - 16px);
+    margin-bottom: 15px;
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    font-size: 0.83em;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 8px;
+
+}
+textarea{
+    height: 190px;
+    padding-top: 10px;
+    resize: none;
+}
+
+.button_field{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#button_submit{
+    width: 180px;
+    border-radius: 0;
+    border: 2px solid #000;
+    padding: 0;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+footer{
+    border-top: 1px solid #65abab;
+    padding: 15px 0 15px 15px;
+}
+.block_footer{
+    width: 33%;
+
+}
+.content_footer{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+/*.content_footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}*/
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_directions{
+    margin-top: 15px;
+    border: 2px solid red;
+
+}
+.iconSocial{
+    font-size: 1.4em;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.iconSocial .fa{
+    color: #d9cabf;
+}
+.iconSocial span{
+    margin-left: 15px;
+}
+.iconSocial span:first-child{
+    margin-left: 0;
 }
 @media only screen and (max-width: 992px) {
     .block_img, .block_text {
@@ -251,5 +334,32 @@ article{
     }
     .block_img img{
         width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .content_footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .block_footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    .iconSocial {
+        font-size: 1.2em;
+    }
+    .iconSocial span{
+        margin-left: 15px;
+    }
+    footer{
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 510px){
+    section .form_block {
+        width: 99%;
     }
 }
