@@ -323,7 +323,6 @@ footer{
 .sl {
     width: 423px;
     height: 423px;
-    display:
 }
 .sl .slick-dots {
     position: absolute;
@@ -372,10 +371,6 @@ footer{
     background: transparent;
     border: 0;
     color: black;
-/*    top: 41%;
-    left: 0;
-    color: #fff;
-*/
     font-size: 36px;
     z-index: 5;
 }
