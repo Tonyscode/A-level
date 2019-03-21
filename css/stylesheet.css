@@ -195,6 +195,15 @@ body {
 .block_wrap:nth-child(2n){
     flex-direction: row-reverse;
 }
+.block_wrap:nth-child(2n) .block_img{
+    display: flex;
+    justify-content: flex-end;
+}
+.block_wrap:nth-child(2n+1) .block_text{
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+}
 .block_img, .block_text{
     height: auto;
     width: calc(50% - 100px);
