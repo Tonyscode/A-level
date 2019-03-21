@@ -204,6 +204,7 @@ body {
     align-self: center;
     flex-wrap: wrap;
 }
+
 .block_img, .block_text{
     height: auto;
     width: calc(50% - 100px);
