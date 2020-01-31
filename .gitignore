@@ -61,3 +61,7 @@ typings/
 .next
 
 .idea
+
+.gulpfile.js
+node_modules/
+
