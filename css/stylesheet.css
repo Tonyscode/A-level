@@ -155,22 +155,35 @@ body {
 .story_block{
     background: url(../images/bg-wood.jpg);
     height: 340px;
+    position: relative;
+    display: flex;
+}
+.story_block .container_text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .container_story{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px 120px;
+    align-self: center; 
     color: #fff;
     font-weight: 400;
     font-size: 1em;
-    text-align: center;
+    align-items: center;
+    width: 60%;
 }
 .container_story h1{
     font-size: 2.56em;
     line-height: 1.13;
     font-family:  'Courgette', cursive;
     margin-bottom: 20px;
+}
+.container_story p{
+    text-align: center;
 }
 .article{
     display: flex;
@@ -439,6 +452,10 @@ footer{
     footer{
         padding-left: 0;
     }
+    .container_story {
+        font-weight: 700;
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 510px) {
     #main{
@@ -472,7 +489,7 @@ footer{
         width: 80%;
     }
     .block_footer.logo img{
-        width: 50%;
+        width: 31%;
     }
 
     #wrapper {
@@ -515,7 +532,9 @@ footer{
         justify-content: center;
         margin: 0;
     }
-
+    .block_wrap{
+        overflow: hidden;
+    }
     .block_wrap.block_text:first-child {
         padding-right: 20px;
     }
@@ -533,7 +552,7 @@ footer{
         margin-bottom: 10px;
     }
     .container_story {
-        font-size: 0.78em;
+        font-size: 0.78em;        
     }
     #button_submit{
         margin-bottom: -5px;
