@@ -465,7 +465,6 @@ footer{
         width: 99%;
     }
 
-
     .block_wrap{
         width: 100%;
     }
@@ -544,8 +543,8 @@ footer{
     }
 
     .block_wrap:first-child img {
-        width: 75%;
-        margin-top: 10px;
+        width: 85%;
+        margin-top: 15px;
     }
     .container_story h1 {
 
