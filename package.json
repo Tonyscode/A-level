@@ -27,7 +27,7 @@
     "grunt-svgstore": "2.0.0",
     "gulp": "^4.0.0",
     "load-grunt-tasks": "4.0.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
