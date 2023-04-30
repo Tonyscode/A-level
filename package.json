@@ -42,7 +42,7 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.7",
     "run-sequence": "^2.2.1"
   },
